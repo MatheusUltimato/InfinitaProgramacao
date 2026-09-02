@@ -1,0 +1,57 @@
+---------------------------------------------------------------------------- Comandos primários ----------------------------------------------------------------------------------
+CREATE -- Criar
+DATABASE -- Banco de dados
+TABLE -- Tabela
+INSERT INTO -- Insere Itens que serão criados na lista escolhida
+VALUES -- Coloca quais serão os itens da lista
+SELECT -- Seleciona algo sobre uma tabela
+FROM -- Fala de onde será retirado [em Tabelas]
+WHERE -- Procura o lugar onde vai ser selecionado
+
+--------------------------------------------------------------------------- Comandos de Valores ----------------------------------------------------------------------------------------
+/**/ Cria um comentário
+-- Cria um comentário de uma linha
+*  Seleciona todos os dados
+' '  Cria uma string
+% Indica como vai ser a ordem de uma seleção
+VARCHAR() Define quantos caracteres pode se ter entre o valor
+CHAR() Define quantos caracteres precisa ter (com limite)
+INT Cria um valor inteiro
+DECIMAL() Cria um valor que tem decimais
+SUM() Faz a soma dos valores escolhidos
+AVG() Faz a média dos valores escolhidos
+(ROUND()) Arredonda para o número mais próximo
+COUNT() Conta quantos items tem o mesmo valor sobre a tabela
+PRIMARY KEY AUTO_INCREMENT Cria uma chave primaria e Desenvolve automaticamente a chave criada
+
+-------------------------------------------------------------------------------- Comandos de Direção ---------------------------------------------------------------------------------
+ORDER BY -- Define qual vai ser a ordem dos itens
+AND -- Coloca algo a mais do que foi selecionado
+LIKE -- Seleciona uma letra sobre a tabela
+ASC -- Coloca os itens selecionados em ordem crescente
+DES -- Coloca os itens selecionados em ordem decrescente
+AS -- Cria uma coluna fora da tabela para os dados que forem apresentados
+
+-------------------------------------------------------------------------------- Comandos Básicos -----------------------------------------------------------------------------------
+CREATE DATABASE -- Cria um banco de dados
+CREATE TABLE -- Cria uma tabela dentro de um banco de dados
+INSERT INTO (Tabela) VALUES (); -- Cria os valores da tabela escolhida
+SELECT * FROM (Tabela) WHERE 1; -- Seleciona todos os dados da tabela criados (Porém pode-se selecionar os quais dados precisar buscar)
+
+Exemplo do LIKE e % sobre Ordem:
+Ordem do %:
+'A%' -- Primeira letra é
+'%A%' -- Que pode ter a letra
+'%A' -- Ultima letra é
+SELECT convidados FROM Aniversario WHERE Nome_convidados LIKE 'A%'; -- Seleciona todos os convidados da tabela de Aniversario onde o nome dos convidados começa com a letra A
+
+Exemplo do SUM, AVG, COUNT e AS:
+SELECT SUM(compra) AS TotalComprado (Pode criar o nome da coluna) FROM compras -- Soma todos os valores(compra) em uma nova coluna chamada TotalComprado da tabela(compras)
+                                                                          /* Na mesma tabela */
+SELECT AVG(compra) AS Mediacomprada FROM compras -- Seleciona todos os valores(compra) na nova coluna chamada Mediacomprada e faz a média dos valores na tabela(compras) 
+
+SELECT COUNT(*) AS TotalFregueses FROM Fregueses -- Conta o Total de Fregueses que tem na tabela Fregueses
+
+Exemplo do ROUND:
+/*Se a média ou soma de vários valores der o resultado em decimais como 45.9201 o (Round()) Arredonda o total para o número mais próximo*/
+SELECT (ROUND(AVG(Conta)) AS valordaConta FROM Pagamento
