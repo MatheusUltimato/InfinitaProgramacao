@@ -20,8 +20,8 @@ INT Cria um valor inteiro
 DECIMAL() Cria um valor que tem decimais
 SUM() Faz a soma dos valores escolhidos
 AVG() Faz a média dos valores escolhidos
-(ROUND()) Arredonda para o número mais próximo
 COUNT() Conta quantos items tem o mesmo valor sobre a tabela
+(ROUND()) Arredonda para o número mais próximo
 PRIMARY KEY AUTO_INCREMENT Cria uma chave primaria e Desenvolve automaticamente a chave criada
 
 -------------------------------------------------------------------------------- Comandos de Direção ---------------------------------------------------------------------------------
@@ -45,13 +45,13 @@ Ordem do %:
 '%A' -- Ultima letra é
 SELECT convidados FROM Aniversario WHERE Nome_convidados LIKE 'A%'; -- Seleciona todos os convidados da tabela de Aniversario onde o nome dos convidados começa com a letra A
 
-Exemplo do SUM, AVG, COUNT e AS:
+Exemplo do SUM(), AVG(), COUNT() e AS:
 SELECT SUM(compra) AS TotalComprado (Pode criar o nome da coluna) FROM compras -- Soma todos os valores(compra) em uma nova coluna chamada TotalComprado da tabela(compras)
                                                                           /* Na mesma tabela */
 SELECT AVG(compra) AS Mediacomprada FROM compras -- Seleciona todos os valores(compra) na nova coluna chamada Mediacomprada e faz a média dos valores na tabela(compras) 
 
 SELECT COUNT(*) AS TotalFregueses FROM Fregueses -- Conta o Total de Fregueses que tem na tabela Fregueses
 
-Exemplo do ROUND:
+Exemplo do (ROUND()):
 /*Se a média ou soma de vários valores der o resultado em decimais como 45.9201 o (Round()) Arredonda o total para o número mais próximo*/
 SELECT (ROUND(AVG(Conta)) AS valordaConta FROM Pagamento
