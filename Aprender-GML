@@ -1,0 +1,29 @@
+-----------------------------------------------------> GameMaker <-----------------------------------------------------------------
+Site para aprender a linguagem: https://manual.gamemaker.io/monthly/en/#t=Content.htm
+Não é preciso declarar váriavel, apenas criar por ela mesma:
+Vida_maxima = 20
+
+---------------------------------------------------->  String  <--------------------------------------------------------------------------
+
+
+
+
+
+// comentário de uma linha
+/**/ comentário
+---------------------------------------------------->  Valores  <------------------------------------------------------------------------
+-= diminiu pelo número sobre o igual
++= adiciona pelo número sobre o igual
+*= multiplica pelo número sobre o igual
+/= Divide pelo número sobre o igual
+sin() -- Seno do número
+cos() -- Cosseno do número
+sqrt() -- Raiz quadrada do número
+log2() -- logaritmo por 2
+log10() -- logaritmo por 10
+logn -- logaritmo por algum número
+round() -- arredonda para o mais próximo
+ceil() -- arredonda para o maior
+floor() -- arredonda para o menor
+
+
